@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://unpkg.com/@fortawesome/fontawesome-free@5.15.3/js/all.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .fade-in {
+        opacity: 0;
+        animation: fade-in-animation 0.8s ease-in-out forwards;
+      }
+
+      @keyframes fade-in-animation {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .twitter-icon {
+        position: fixed;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+        padding: 10px;
+        border-radius: 50%;
+      }
+      .delay-1 {
+        transition-delay: 0.2s;
+      }
+
+      .delay-2 {
+        transition-delay: 0.4s;
+      }
+
+      .delay-3 {
+        transition-delay: 0.6s;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div>
+      <div
+        class="logo flex justify-center h-30 bg-gray-100 items-center padding-top: 10px fade-in delay-1"
+      >
+        <lottie-player
+          src="https://lottie.host/df7fe86b-f9f0-4781-9f34-31d009899959/PlOJp3hftW.json"
+          background="#F3F4F6"
+          speed="2"
+          style="width: 125px; height: 125px"
+          autoplay
+        ></lottie-player>
+      </div>
+      <div class="font-sans flex flex-col items-center text-center pt-30">
+        <div style="margin-top: 25vh">
+          <h1
+            class="text-gray-700 text-5xl md:text-6xl lg:text-7xl font-bold fade-in delay-2"
+          >
+            Teach Deck
+          </h1>
+          <h2
+            class="text-gray-400 md:text-xl lg:text-xl fade-in delay-3 mt-4 word-wrap: break-word"
+          >
+          We are creating an all-in-one platform designed to enhance the <br>teaching and learning experience for creators and online educators.
+          </h2>
+        </div>
+        <button
+          id="waitlistButton"
+          class="mt-8 px-8 py-4 text-xl font-bold rounded-full bg-gray-700 text-white fade-in delay-3"
+        >
+          Join Waitlist
+        </button>
+      </div>
+    </div>
+    <!-- Modal -->
+<div id="modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
+    <div class="fixed inset-0 bg-gray-900 opacity-75" id="notmodal"></div> <!-- Overlay -->
+    <div class="relative bg-white rounded-lg w-96 p-8">
+      <div class="flex flex-col items-center"> <!-- Centered content container -->
+        <!-- Modal content goes here -->
+        <h2 class="text-xl font-bold mb-4">Join Waitlist</h2>
+        <input type="email" id="emailAddress" class="form-control w-full px-4 py-2 rounded border border-gray-300 mb-4" placeholder="Enter your email address">
+        <button id="submitWaitlistButton" class="px-8 py-4 text-xl font-bold rounded-full bg-gray-700 text-white">Submit</button>
+      </div>
+    </div>
+  </div>
+  
+  
+
+    
+    <div class="twitter-icon text-gray-700">
+        <a href="https://twitter.com/teachdeckio" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      </i>
+    </div>
+  </body>
+  <script>
+    // Show modal when "Join Waitlist" button is clicked
+    document
+      .getElementById("waitlistButton")
+      .addEventListener("click", function () {
+        document.getElementById("modal").classList.remove("hidden");
+      });
+
+    // Hide modal when "Submit" button is clicked
+    document
+      .getElementById("submitWaitlistButton")
+      .addEventListener("click", function () {
+        var email = document.getElementById("emailAddressModal").value;
+        // Call your API to save the email address
+        // Replace this with your actual API call
+        console.log("Save email API call:", email);
+
+        // Hide the modal after submitting
+        document.getElementById("modal").classList.add("hidden");
+      });
+
+    // Close modal when clicking outside of it
+    window.addEventListener("click", function (event) {
+      if (event.target === document.getElementById("notmodal")) {
+        document.getElementById("modal").classList.add("hidden");
+      }
+    });
+  </script>
+</html>
