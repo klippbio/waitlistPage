@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Website</title>
+    <title>TeachDeck</title>
+    <link rel="icon" href="logo.png" type="image/x-icon" />
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script
       src="https://unpkg.com/@fortawesome/fontawesome-free@5.15.3/js/all.min.js"
@@ -41,6 +42,9 @@
       .delay-3 {
         transition-delay: 0.6s;
       }
+      .delay-4 {
+        transition-delay: 0.8s;
+      }
     </style>
   </head>
   <body class="bg-gray-100">
@@ -66,7 +70,9 @@
           <h2
             class="text-gray-400 md:text-xl lg:text-xl fade-in delay-3 mt-4 word-wrap: break-word"
           >
-          We are creating an all-in-one platform designed to enhance the <br>teaching and learning experience for creators and online educators.
+            We are creating an all-in-one platform designed to enhance the
+            <br />teaching and learning experience for creators and online
+            educators.
           </h2>
         </div>
         <button
@@ -78,24 +84,38 @@
       </div>
     </div>
     <!-- Modal -->
-<div id="modal" class="fixed inset-0 flex items-center justify-center z-50 hidden">
-    <div class="fixed inset-0 bg-gray-900 opacity-75" id="notmodal"></div> <!-- Overlay -->
-    <div class="relative bg-white rounded-lg w-96 p-8">
-      <div class="flex flex-col items-center"> <!-- Centered content container -->
-        <!-- Modal content goes here -->
-        <h2 class="text-xl font-bold mb-4">Join Waitlist</h2>
-        <input type="email" id="emailAddress" class="form-control w-full px-4 py-2 rounded border border-gray-300 mb-4" placeholder="Enter your email address">
-        <button id="submitWaitlistButton" class="px-8 py-4 text-xl font-bold rounded-full bg-gray-700 text-white">Submit</button>
+    <div
+      id="modal"
+      class="fixed inset-0 flex items-center justify-center z-50 hidden"
+    >
+      <div class="fixed inset-0 bg-gray-900 opacity-75" id="notmodal"></div>
+      <!-- Overlay -->
+      <div class="relative bg-white rounded-lg w-96 p-8">
+        <div class="flex flex-col items-center">
+          <!-- Centered content container -->
+          <!-- Modal content goes here -->
+          <h2 class="text-xl font-bold mb-4">Join Waitlist</h2>
+          <input
+            type="email"
+            id="emailAddress"
+            class="form-control w-full px-4 py-2 rounded border border-gray-300 mb-4"
+            placeholder="Enter your email address"
+          />
+          <button
+            id="submitWaitlistButton"
+            class="px-8 py-4 text-xl font-bold rounded-full bg-gray-700 text-white"
+          >
+            Submit
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  
-  
-
-    
-    <div class="twitter-icon text-gray-700">
-        <a href="https://twitter.com/teachdeckio" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-      </i>
+    <div
+      class="fixed bottom-20 left-1/2 transform -translate-x-1/2 p-2 rounded-full bg-gray-100 text-gray-700 fade-in delay-4"
+    >
+      <a href="https://twitter.com/teachdeckio" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
     </div>
   </body>
   <script>
@@ -110,7 +130,7 @@
     document
       .getElementById("submitWaitlistButton")
       .addEventListener("click", function () {
-        var email = document.getElementById("emailAddressModal").value;
+        var email = document.getElementById("emailAddress").value;
         // Call your API to save the email address
         // Replace this with your actual API call
         console.log("Save email API call:", email);
