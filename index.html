@@ -47,40 +47,45 @@
       }
     </style>
   </head>
-  <body class="bg-gray-100">
-    <div>
-      <div
-        class="logo flex justify-center h-30 bg-gray-100 items-center padding-top: 10px fade-in delay-1"
-      >
-        <lottie-player
-          src="https://lottie.host/df7fe86b-f9f0-4781-9f34-31d009899959/PlOJp3hftW.json"
-          background="#F3F4F6"
-          speed="2"
-          style="width: 125px; height: 125px"
-          autoplay
-        ></lottie-player>
-      </div>
-      <div class="font-sans flex flex-col items-center text-center pt-30">
-        <div style="margin-top: 25vh">
-          <h1
-            class="text-gray-700 text-5xl md:text-6xl lg:text-7xl font-bold fade-in delay-2"
-          >
-            Teach Deck
-          </h1>
-          <h2
-            class="text-gray-400 md:text-xl lg:text-xl fade-in delay-3 mt-4 word-wrap: break-word"
-          >
-            We are creating an all-in-one platform designed to enhance the
-            <br />teaching and learning experience for creators and online
-            educators.
-          </h2>
-        </div>
-        <button
-          id="waitlistButton"
-          class="mt-8 px-8 py-4 text-xl font-bold rounded-full bg-gray-700 text-white fade-in delay-3"
+  <body class="flex flex-col min-h-screen bg-gray-100">
+    <div
+      class="logo flex justify-center h-30 bg-gray-100 items-center padding-top: 10px fade-in delay-1"
+    >
+      <lottie-player
+        src="https://lottie.host/df7fe86b-f9f0-4781-9f34-31d009899959/PlOJp3hftW.json"
+        background="#F3F4F6"
+        speed="2"
+        style="width: 125px; height: 125px"
+        autoplay
+      ></lottie-player>
+    </div>
+    <div class="font-sans flex flex-col items-center text-center pt-30">
+      <div style="margin-top: 25vh">
+        <h1 class="text-gray-700 text-6xl font-bold fade-in delay-2">
+          Teach Deck
+        </h1>
+        <h2
+          class="text-gray-400 md:text-xl lg:text-xl fade-in delay-3 mt-4 word-wrap: break-word"
         >
-          Join Waitlist
-        </button>
+          We are creating an all-in-one platform designed to enhance the
+          <br />teaching and learning experience for creators and online
+          educators.
+        </h2>
+      </div>
+      <button
+        id="waitlistButton"
+        class="mt-8 px-8 py-4 text-xl font-bold rounded-full bg-gray-700 text-white fade-in delay-3"
+      >
+        Join Waitlist
+      </button>
+    </div>
+    <div class="flex justify-center mt-auto">
+      <div
+        class="p-2 rounded-full bg-gray-100 text-gray-700 fade-in delay-4 text-4xl"
+      >
+        <a href="https://twitter.com/teachdeckio" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
       </div>
     </div>
     <!-- Modal -->
@@ -109,13 +114,6 @@
           </button>
         </div>
       </div>
-    </div>
-    <div
-      class="fixed bottom-20 left-1/2 transform -translate-x-1/2 p-2 rounded-full bg-gray-100 text-gray-700 fade-in delay-4"
-    >
-      <a href="https://twitter.com/teachdeckio" target="_blank">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
     </div>
   </body>
   <script>
